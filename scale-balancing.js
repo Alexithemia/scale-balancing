@@ -1,4 +1,4 @@
-let array = ['[5, 9]', '[1, 2, 6, 7]'];
+let array = ['[3, 9]', '[1, 2, 6, 7]'];
 
 function scaleBalancing(strArr) {
   let scale = strArr[0].slice(1, -1).split(', ');;
@@ -9,8 +9,6 @@ function scaleBalancing(strArr) {
   for (let i = 0; i < weights.length; i++) {
     let tempWeights = weights.slice(0);
     tempWeights.splice(i, 1);
-    console.log('temp', tempWeights);
-    console.log('weights', weights);
     if (parseInt(scale[0]) + parseInt(weights[i]) === parseInt(scale[1])) {
       usedWeights += weights[i];
       balance = true;
@@ -39,10 +37,7 @@ function scaleBalancing(strArr) {
   }
 
   console.log(usedWeights);
-  // function weigh(scaleArr, weightsArr){
-
-  // }
-
+  return usedWeights;
 }
 
 scaleBalancing(array);
