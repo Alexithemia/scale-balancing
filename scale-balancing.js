@@ -35,8 +35,6 @@ function scaleBalancing(strArr) {
       }
     }
   }
-
-  console.log(usedWeights);
   return usedWeights;
 }
 
